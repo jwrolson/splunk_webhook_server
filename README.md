@@ -1,0 +1,1 @@
+Recieve webhooks from Splunk and then gets data from search heads.
