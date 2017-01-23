@@ -11,14 +11,14 @@ def get_splunk_data(sid):
 	rr = results.ResultsReader(job.results())
 	return rr
 
-@APP.route("/splunk/webhook", methods=['POST'])
+@app.route("/splunk/webhook", methods=['POST'])
 def splunk_webhook():
 	webhook = f.request.json
 	sid = webhook.get('sid')
 	splunk_data = get_splunk_data(sid)
 	return ""
 
-@APP.route("/healthcheck", methods=['GET'])
+@app.route("/healthcheck", methods=['GET'])
 def healthcheck():
 	return('Alive')
 
